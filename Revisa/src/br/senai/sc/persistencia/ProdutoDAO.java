@@ -23,6 +23,8 @@ public class ProdutoDAO {
     }
 
     public void excluir(String nome, List<Produto> produtos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
+
+    
 }

@@ -3,6 +3,7 @@ package br.senai.sc.view;
 
 import br.senai.sc.model.negocio.Produto;
 import br.senai.sc.persistencia.ProdutoDAO;
+import br.senai.sc.validacao.Validacao;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -47,8 +48,14 @@ public class JanelaProduto {
         void adicionaProduto(List<Produto> Produtos){            
             Produto p  = new Produto();
             
-            p.setNome(JOptionPane.showInputDialog("informe o nome do produto"));
-            p.setDataValidade(JOptionPane.showInputDialog("Informe a data de validade do funcionário"));
+            String produto;
+            
+            do{
+                produto = JOptionPane.showInputDialog("informe o nome do produto");
+            }while(!Validacao.somenteLetras(produto));
+            
+            p.setNome(produto);
+            p.setDataValidade(JOptionPane.showInputDialog("Informe a data de validade do produto"));
             p.setValor(Double.parseDouble(JOptionPane.showInputDialog("Informe o valor do produto")));
                                                                                        
                                                                                                      

@@ -54,14 +54,14 @@ public class JanelaPrincipal {
                 case 5:
                     jp.menuProduto(produtos);
                     break;
-                case 6:
-                    break;
+                case 6:                 
+                 break;
                 default:
                     JOptionPane.showMessageDialog(null,
                             "Opção inexistente! ");
             }
 
-            }while (opcao != 0);
+            }while (opcao != 6);
     }
        
     
